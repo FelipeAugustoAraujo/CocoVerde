@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021929"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "frente",
+  "fields": [
+    {
+      "fieldName": "quantidade",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "criadoEm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modificadoEm",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Frente",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "produto",
+      "otherEntityRelationshipName": "frente",
+      "relationshipName": "produto",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "entradaFinanceira",
+      "otherEntityRelationshipName": "frente",
+      "relationshipName": "entradaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "saidaFinanceira",
+      "otherEntityRelationshipName": "frente",
+      "relationshipName": "saidaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

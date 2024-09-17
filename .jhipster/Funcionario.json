@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021129"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "funcionario",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataNascimento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "identificador",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataCadastro",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "valorBase",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Funcionario",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "endereco",
+      "otherEntityRelationshipName": "funcionario",
+      "relationshipName": "endereco",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

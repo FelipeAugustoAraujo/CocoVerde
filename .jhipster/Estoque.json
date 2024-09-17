@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021829"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "estoque",
+  "fields": [
+    {
+      "fieldName": "quantidade",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "criadoEm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modificadoEm",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Estoque",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "produto",
+      "otherEntityRelationshipName": "estoque",
+      "relationshipName": "produto",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "entradaFinanceira",
+      "otherEntityRelationshipName": "estoque",
+      "relationshipName": "entradaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "saidaFinanceira",
+      "otherEntityRelationshipName": "estoque",
+      "relationshipName": "saidaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

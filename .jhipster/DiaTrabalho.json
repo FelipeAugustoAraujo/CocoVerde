@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20240904022329"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "dia_trabalho",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DiaTrabalho",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

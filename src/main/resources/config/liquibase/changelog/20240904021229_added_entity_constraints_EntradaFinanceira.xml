@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity EntradaFinanceira.
+    -->
+    <changeSet id="20240904021229-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="fornecedor_id"
+                                 baseTableName="entrada_financeira"
+                                 constraintName="fk_entrada_financeira__fornecedor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fornecedor"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="estoque_id"
+                                 baseTableName="entrada_financeira"
+                                 constraintName="fk_entrada_financeira__estoque_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="estoque"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="frente_id"
+                                 baseTableName="entrada_financeira"
+                                 constraintName="fk_entrada_financeira__frente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="frente"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="fechamento_caixa_detalhes_id"
+                                 baseTableName="entrada_financeira"
+                                 constraintName="fk_entrada_financeira__fechamento_caixa_detalhes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fechamento_caixa_detalhes"
+                                 />
+    </changeSet>
+</databaseChangeLog>

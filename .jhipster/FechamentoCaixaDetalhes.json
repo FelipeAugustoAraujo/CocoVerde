@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20240904022029"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "fechamento_caixa_detalhes",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "name": "FechamentoCaixaDetalhes",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "fechamentoCaixa",
+      "otherEntityRelationshipName": "fechamentoCaixaDetalhes",
+      "relationshipName": "fechamentoCaixa",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "entradaFinanceira",
+      "otherEntityRelationshipName": "fechamentoCaixaDetalhes",
+      "relationshipName": "entradaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "saidaFinanceira",
+      "otherEntityRelationshipName": "fechamentoCaixaDetalhes",
+      "relationshipName": "saidaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,86 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021229"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "entrada_financeira",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "valorTotal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "metodoPagamento",
+      "fieldType": "MetodoPagamento",
+      "fieldValues": "DINHEIRO,CARTAO_DEBITO,CARTAO_CREDITO,PIX,TRANSFERENCIA"
+    },
+    {
+      "fieldName": "statusPagamento",
+      "fieldType": "StatusPagamento",
+      "fieldValues": "PAGO,NAO_PAGO"
+    },
+    {
+      "fieldName": "responsavelPagamento",
+      "fieldType": "ResponsavelPagamento",
+      "fieldValues": "BARRACA,CHEFE,FELIPE_GISELLE"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "EntradaFinanceira",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "fornecedor",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "fornecedor",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "estoque",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "estoque",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "frente",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "frente",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fechamentoCaixaDetalhes",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "fechamentoCaixaDetalhes",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "detalhesEntradaFinanceira",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "detalhesEntradaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "imagem",
+      "otherEntityRelationshipName": "entradaFinanceira",
+      "relationshipName": "imagem",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

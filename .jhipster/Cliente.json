@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021629"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "cliente",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataNascimento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "identificador",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataCadastro",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "telefone",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Cliente",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "endereco",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "endereco",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

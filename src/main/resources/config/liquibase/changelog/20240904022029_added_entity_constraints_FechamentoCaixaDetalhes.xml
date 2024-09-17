@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity FechamentoCaixaDetalhes.
+    -->
+    <changeSet id="20240904022029-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="fechamento_caixa_id"
+                                 baseTableName="fechamento_caixa_detalhes"
+                                 constraintName="fk_fechamento_caixa_detalhes__fechamento_caixa_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fechamento_caixa"
+                                 />
+    </changeSet>
+</databaseChangeLog>

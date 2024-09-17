@@ -1,0 +1,57 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021729"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "produto",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valorBase",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Produto",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "estoque",
+      "otherEntityRelationshipName": "produto",
+      "relationshipName": "estoque",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "frente",
+      "otherEntityRelationshipName": "produto",
+      "relationshipName": "frente",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "detalhesEntradaFinanceira",
+      "otherEntityRelationshipName": "produto",
+      "relationshipName": "detalhesEntradaFinanceira",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "fornecedor",
+      "otherEntityRelationshipName": "produto",
+      "relationshipName": "fornecedor",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,69 @@
+{
+  "annotations": {
+    "changelogDate": "20240904020929"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "endereco",
+  "fields": [
+    {
+      "fieldName": "cep",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "logradouro",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numero",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "complemento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bairro",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Endereco",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "fornecedor",
+      "otherEntityRelationshipName": "endereco",
+      "relationshipName": "fornecedor",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "funcionario",
+      "otherEntityRelationshipName": "endereco",
+      "relationshipName": "funcionario",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "endereco",
+      "relationshipName": "cliente",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cidade",
+      "otherEntityRelationshipName": "endereco",
+      "relationshipName": "cidade",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

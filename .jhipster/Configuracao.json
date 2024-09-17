@@ -1,0 +1,15 @@
+{
+  "annotations": {
+    "changelogDate": "20240904022429"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "configuracao",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "name": "Configuracao",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,76 @@
+{
+  "annotations": {
+    "changelogDate": "20240904022129"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "fechamento_caixa",
+  "fields": [
+    {
+      "fieldName": "dataInicial",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "dataFinal",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "quantidadeCocosPerdidos",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantidadeCocosVendidos",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantidadeCocoSobrou",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "divididoPor",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valorTotalCoco",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorTotalCocoPerdido",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorPorPessoa",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorDespesas",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorDinheiro",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorCartao",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "valorTotal",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "FechamentoCaixa",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "fechamentoCaixaDetalhes",
+      "otherEntityRelationshipName": "fechamentoCaixa",
+      "relationshipName": "fechamentoCaixaDetalhes",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

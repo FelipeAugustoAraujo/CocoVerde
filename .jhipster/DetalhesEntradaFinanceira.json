@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021329"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "detalhes_entrada_financeira",
+  "fields": [
+    {
+      "fieldName": "quantidadeItem",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DetalhesEntradaFinanceira",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "produto",
+      "otherEntityRelationshipName": "detalhesEntradaFinanceira",
+      "relationshipName": "produto",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "entradaFinanceira",
+      "otherEntityRelationshipName": "detalhesEntradaFinanceira",
+      "relationshipName": "entradaFinanceira",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

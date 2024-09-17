@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity DetalhesEntradaFinanceira.
+    -->
+    <changeSet id="20240904021329-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="produto_id"
+                                 baseTableName="detalhes_entrada_financeira"
+                                 constraintName="fk_detalhes_entrada_financeira__produto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="produto"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="entrada_financeira_id"
+                                 baseTableName="detalhes_entrada_financeira"
+                                 constraintName="fk_detalhes_entrada_financeira__entrada_financeira_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="entrada_financeira"
+                                 />
+    </changeSet>
+</databaseChangeLog>

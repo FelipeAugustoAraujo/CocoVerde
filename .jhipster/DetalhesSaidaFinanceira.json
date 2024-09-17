@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021529"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "detalhes_saida_financeira",
+  "fields": [
+    {
+      "fieldName": "quantidadeItem",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DetalhesSaidaFinanceira",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

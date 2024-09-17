@@ -1,0 +1,72 @@
+{
+  "annotations": {
+    "changelogDate": "20240904021429"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "saida_financeira",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "valorTotal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "metodoPagamento",
+      "fieldType": "MetodoPagamento",
+      "fieldValues": "DINHEIRO,CARTAO_DEBITO,CARTAO_CREDITO,PIX,TRANSFERENCIA"
+    },
+    {
+      "fieldName": "statusPagamento",
+      "fieldType": "StatusPagamento",
+      "fieldValues": "PAGO,NAO_PAGO"
+    },
+    {
+      "fieldName": "responsavelPagamento",
+      "fieldType": "ResponsavelPagamento",
+      "fieldValues": "BARRACA,CHEFE,FELIPE_GISELLE"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "SaidaFinanceira",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "estoque",
+      "otherEntityRelationshipName": "saidaFinanceira",
+      "relationshipName": "estoque",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "frente",
+      "otherEntityRelationshipName": "saidaFinanceira",
+      "relationshipName": "frente",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fechamentoCaixaDetalhes",
+      "otherEntityRelationshipName": "saidaFinanceira",
+      "relationshipName": "fechamentoCaixaDetalhes",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "imagem",
+      "otherEntityRelationshipName": "saidaFinanceira",
+      "relationshipName": "imagem",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

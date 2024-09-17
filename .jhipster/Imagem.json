@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20240904022229"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "imagem",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "contentType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Imagem",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "saidaFinanceira",
+      "otherEntityRelationshipName": "imagem",
+      "relationshipName": "saidaFinanceira",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "entradaFinanceira",
+      "otherEntityRelationshipName": "imagem",
+      "relationshipName": "entradaFinanceira",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
